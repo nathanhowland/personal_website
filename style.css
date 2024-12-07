@@ -1,0 +1,213 @@
+/* Ensure the whole body is responsive */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-size: 100%; 
+    background-position: 0px -700px;
+    background-repeat: no-repeat;
+    color: #333;
+}
+
+/* Background for the Home Page */
+body.page-1 {
+    background-image: url('images/bg_flow.jpeg'); /* Replace with the Home Page background image */
+
+}
+
+/* Background for the About Page */
+body.page-2 {
+    background-image: url('images/bg_flow.jpeg'); /* Replace with the About Page background image */
+}
+
+/* Background for the Works Page */
+body.page-3 {
+    background-image: url('images/bg_flow.jpeg'); 
+}
+
+/* Background for the Blog Page */
+body.page-4 {
+    background-image: url('images/bg_flow.jpeg'); 
+}
+
+
+/* Header */
+header {
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically in the center */
+    height: 100px; /* Set a fixed height for the header */
+    font-family: 'Merriweather', serif;
+    text-align: center
+    
+}
+
+nav {
+    display: flex;
+    align-items: center; /* Align nav items vertically */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    position: absolute;
+    right: 0; /* Keep links on the right */
+    top: 50%; /* Vertically center the nav items */
+    transform: translateY(-50%); /* Center the nav vertically */
+    
+}
+
+nav ul li {
+    margin: 0 30px;
+    top: 50%;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px; /* Adjust size if needed */
+    text-align: center
+}
+
+.header-container {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 25%; /* Horizontal position */
+    transform: translate(-50%, -50%); /* Proper centering */
+    background-color: rgb(0, 0, 0, 0.7); /* Background color for the text, PREVIOUS RGB(78, 57, 30) */
+    padding: 2px;
+    border-radius: 10px;
+    font-size: large;
+    color: white;
+    z-index: 1; /* Ensure text stays above nav */
+    border: 3px solid rgba(0, 0, 0, 0.9); /* Optional: Adds a border for style */
+}
+
+.nav-container {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 75%; /* Horizontal position to mirror .header-container */
+    transform: translate(-50%, -50%); /* Proper centering */
+    background-color: rgb(0, 0, 0, 0.7); /* Background color for the text, PREVIOUS RGB(78, 57, 30) */
+    padding: 10px 20px; /* Ensure both have the same padding */
+    border-radius: 10px; /* Consistent border radius */
+    font-size: 18px; /* Ensure consistent font size */
+    color: white;
+    line-height: 1.5; /* Vertically center text within the box */
+    z-index: 1; /* Ensure text stays above nav */
+    border: 3px solid rgba(0, 0, 0, 0.9); /* Optional: Adds a border for style */
+}
+
+
+
+/* Centered Content (Headshot and Bio) */
+.center-content {
+    top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem 1rem;
+
+}
+
+
+
+.container {
+    background-color: rgb(0, 0, 0, 0.7); /* Background color for the text, PREVIOUS RGB(78, 57, 30) */
+}
+.headshot {
+    width: auto; /* Set a fixed width */
+    height: 400px; /* Set a fixed height */
+    border-radius: 10px; /* No border radius for a rectangular shape */
+    margin-bottom: 30px;
+    margin-top: -60px;
+    object-fit: contain; /* Ensures images fill the box without distortion */
+    border: 3px solid rgba(0, 0, 0, 0.9); /* Optional: Adds a border for style */
+    
+}
+
+.bio {
+    background-color: rgb(0, 0, 0, 0.7); /* Same backdrop as the header */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    max-width: 50%;
+    font-family: 'Merriweather', serif;
+    text-align: left;
+    border: 3px solid rgba(0, 0, 0, 0.9); /* Optional: Adds a border for style */
+}
+
+
+/* Main Content */
+main {
+    padding: 2rem;
+    text-align: center;
+}
+
+.bio2 {
+    background-color: rgb(0, 0, 0, 0.7);
+    color: white;
+    padding: 0px;
+    border-radius: 10px;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    max-width: 700px; /* Set a max width if desired */
+    width: 100%; /* Takes up available space, but doesn't exceed max-width */
+    box-sizing: border-box;
+    margin: 0 auto; /* Centers the box horizontally */
+    border: 3px solid rgba(0, 0, 0, 0.9); /* Optional: Adds a border for style */
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+.download-btn {
+    display: inline-block;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px;
+    margin: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.download-btn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-container {
+        left: 10px;
+        top: 10px;
+    }
+
+    .center-content {
+        padding: 2rem 1rem;
+    }
+}
